@@ -35,13 +35,16 @@ const EntertainmentCardSlider = () => {
 
     return (
         <>
+            <h1 className="text-2xl font-bold text-gray-900 my-3">
+                The best of Entertainment
+            </h1>
            <Slider {...settings}>
                {EntertainmentImage.map((image)=> (
-                   <EntertainmentCard src={image} />
+                   <EntertainmentCard  key={image} src={image} />
                ))}
            </Slider>
         </>
     )
-}
+};
 
 export default EntertainmentCardSlider;
